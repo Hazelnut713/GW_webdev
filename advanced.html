@@ -3,20 +3,60 @@
     <head>
         <title>Advanced HTML Notes</title>
         <meta charset="UTF-8">
+        <style>
+            /* Cascading Style Sheets
+            1. Selector
+            2. Declaration
+                a. Property
+                b. Value
+             */
+             body{
+                color:rgb(192, 17, 32);
+                background-color: rgb(94, 33, 165);
+             }
+             h1{
+                color:rgba(220, 20, 60, 0.795);
+                text-decoration:underline;
+                text-align:center;
+             }
+             #even{
+                color:aliceblue;
+             }
+             .numbered{
+                font-size: 20px;
+             }
+             ul{
+                background-color: rgba(81, 198, 214, 0.644);
+                border-radius:4px;
+                width: 100px;
+                height: 100px;
+                font-size: 1.25em;
+                border:solid 3px rgb(161, 75, 241);
+                /*vw vh adjust based on the size of the screen*/
+             }
+             #winter{
+                width:50%
+             }
+             #fall{
+                width: 670px;
+                height:400px;
+             }
+        </style>
     </head>
     <body>
         <h1>Advanced HTML Notes</h1>
         <h3>Lists:</h3>
-        <ol type="i">
+        <ol type="i"
+        class="numbered">
             <li>This is the first thing</li>
-            <li>This is the second</li>
+            <li id="even">This is the second</li>
             <li>This comes in third</li>
         </ol>
         <ul>
             <li><a href="https://www.pickpik.com/orchard-apple-apples-fruit-green-nature-10657" target="_blank">Apple</a></li>
-            <li>Banana</li>
+            <li id="even">Banana</li>
             <li>Orange</li>
-            <li>Kiwi</li>
+            <li id ="even">Kiwi</li>
         </ul style="square">
         <dl>
             <dt>Fall</dt>
@@ -29,9 +69,9 @@
         </dl>
 
         <h3>Attributes:</h3>
-        <a href="https://www.alltrails.com/trail/us/utah/mt-timpanogos-timpooneke-trail" target="_blank"><img src="https://globalsummitguide.com/wp-content/uploads/2026/07/AdobeStock_1146206325-scaled.jpeg" alt="Mount Timp" width="200px"></a>
+        <a href="https://www.alltrails.com/trail/us/utah/mt-timpanogos-timpooneke-trail" target="_blank"><img src="https://globalsummitguide.com/wp-content/uploads/2026/07/AdobeStock_1146206325-scaled.jpeg" alt="Mount Timp" id="fall"></a>
         <div>
-        <img src="MT_Timp.jpg" alt="Sunset on Timp" width="200px">
+        <img src="MT_Timp.jpg" alt="Sunset on Timp" id="winter">
         <p>Image from <a href="https://commons.wikimedia.org/wiki/File:Mount_Timpanogos_at_sunset.jpg" target="_blank">Wikimedia Commons</a></p>
         </div>
     </body>
