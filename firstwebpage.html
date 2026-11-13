@@ -53,6 +53,28 @@
             #image2{
                 padding:5px;
             }
+            #hidden{
+                width:50px;
+                height:50px;
+                background-color:rgba(165, 42, 42, 0.911);
+                color:white;
+            }
+            #texth{
+                display:flex;
+                padding:15px;
+                background-color:rgba(165, 42, 42, 0.911);
+                border-radius:3px;
+                border:solid 4px rgba(255, 166, 0, 0.733);
+                width:75px;
+            }
+            #imageh{
+                display:flex;
+                flex-direction: row;
+                margin:5px;
+            }
+            #stuff{
+                display:none;
+            }
         </style>
     </head>
     <body>
@@ -83,10 +105,29 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzEMmagphA-sjsx9wA4SX8wSPFq6HNbehN9i55YbJYYw&s=10" alt="Going Merry" id="merry">
             <p id="image1">The Going Merry 
                 Image from <a href="https://commons.wikimedia.org/wiki/File:%22Going_Merry%22_in_Tokyo_Bay;_July_2004.jpg" target="_blank">Wikimedia Commons</a></p>
+        </div>
+        <div id="ships">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkivVhFPFRCQyrHpgLGI1bcpjb-h-YNhjXGRBE4Zpnw&s=10" alt="The Sunny" id="sunny">
                 <p id="image2">The Sunny
                     Image from <a href="https://www.flickr.com/photos/granun/15704018266" target="_blank">flickr</a> </p>
         </div>
         <p>For more information about one piece like how, when, and other interesting facts please vist the <a href="https://en.wikipedia.org/wiki/One_Piece_(1999_TV_series)" target="_blank">Wikipedia</a> of One Piece</p>
+        <button id="hidden" onclick="show()">Show More</button>
+        <div id="stuff">
+                    <p id="texth">My favorite</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh6PtNZWa4HYyxHsRhafkzC0sF3mruv-htZybXBF5eg&s=10" alt="swords" id="imageh">
+        </div>
+        <script>
+            function show(){
+                let element = document.getElementById("stuff")
+                if (element.style.display == "flex"){
+                    element.style.display = "none"
+                    document.getElementById("hidden").innerHTML = "Show More"
+                }else{
+                    element.style.display = "flex"
+                    document.getElementById("hidden").interHTML = "Show Less"
+                }
+            }
+        </script>
     </body>
 </html>

@@ -29,6 +29,9 @@
                 align-items: center;
                 flex-wrap: wrap;
             }
+            #parrot{
+                width:50px
+            }
         </style>
     </head>
     <body>
@@ -87,6 +90,16 @@
                     document.getElementById("showMore").interHTML = "Show Less"
                 }
             }
+            let images= ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83RwHQUSBXCMNLkyBiAXyAy7rfh9XTjAd6aKvttPuTA&s=10 ", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8Lf_XMIGZBtayJpJNPFmmCALIgEqjfv2qj3bedJAQw&s=10 ", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2UgeGaO2d9zSC1UD23pa_fHucCu0fBQZ4bFHT_ArNzg&s=10" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbF9vynsFUyrvJ0rk-e3nn7AOUJbfY6nbTLGcLh9_jw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJ4IZbkwwyJD4dq7MObC7x1gpYN0xVkTOV_X9T9ZCMQ&s=10"]
+            let current = 0
+            function changeImage(){
+                current+= 1
+                if (current > 4){
+                    current = 0
+                }
+                document.getElementById("parrot").src = images[current]
+            }
         </script>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJ4IZbkwwyJD4dq7MObC7x1gpYN0xVkTOV_X9T9ZCMQ&s=10" alt="Parrot" id="parrot" onmouseout="changeImage()">
     </body>
-</html>s
+</html>
