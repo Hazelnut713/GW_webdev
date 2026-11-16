@@ -114,8 +114,8 @@
         <p>For more information about one piece like how, when, and other interesting facts please vist the <a href="https://en.wikipedia.org/wiki/One_Piece_(1999_TV_series)" target="_blank">Wikipedia</a> of One Piece</p>
         <button id="hidden" onclick="show()">Show More</button>
         <div id="stuff">
-                    <p id="texth">My favorite</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh6PtNZWa4HYyxHsRhafkzC0sF3mruv-htZybXBF5eg&s=10" alt="swords" id="imageh">
+                    <p id="texth">Zorros swords are very unique all being very stong. Howev er he didn't always have these. He starts off with 3 sword but with only one good one, The Wado Ichimonji where his others where basic ordinary ones. The way he gets Wado Ichimonji is by inheriting it from a friend that passed. After his two others swords break he gets the Sandai Kietsu and Yubashiri. The Yobashiri later gets turned to dust due to a devel fruit turning it rusty and making it unusable. In which he seeks out a new sword being the Shusui which is 1 of only 2 black blades in the series we know of. He gets this after defeating a brought back to life Ryuma and usues it for most of the story. When he gets to Wano they know the blade since it was stolen from there and should be returned. Which he does do but only since he gets a good replacment called Enma. This sword is by far my favorite sword he has mainly due to its color scheme. Enma is known for being a blade that sucks the users life force and usually kills them which is hwy nobody uses it. Zoro however due to having conqueror's haki is able to use it and not die. These are ll of zoros swords up entill this point so far.</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh6PtNZWa4HYyxHsRhafkzC0sF3mruv-htZybXBF5eg&s=10" alt="swords" id="imageh" onmouseout="changeImage()">
         </div>
         <script>
             function show(){
@@ -127,6 +127,14 @@
                     element.style.display = "flex"
                     document.getElementById("hidden").interHTML = "Show Less"
                 }
+                let images= ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh6PtNZWa4HYyxHsRhafkzC0sF3mruv-htZybXBF5eg&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzXKZnwi38uNOYAQe6IPTjMIhE2fNpbWjg6x45Yg6OAw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRMbuuY8L6UJXgceqqBud-RnYb-Eln78PJUb_eFsm9Q&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzNZZ9GyW_s_d6tVnbiTBvdg0YYSXq074girOWCNwzNw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhVJ0-8vLfujPfi-lBRkYjXsMj6ojLlb6mscRlf2chA&s=10"]
+            let current = 0
+            function changeImage(){
+                current+= 1
+                if (current > 4){
+                    current = 0
+                }
+                document.getElementById("imageh").src = images[current]
             }
         </script>
     </body>
