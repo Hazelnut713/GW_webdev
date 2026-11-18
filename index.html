@@ -1,13 +1,141 @@
 <!DOCTYPE html>
 <html> <!-- This is a comment-->
     <head>
-        <title>Basic Starter</title>
+        <title>One Piece</title>
         <meta charset="UTF-8">
+        <style>
+            #merry{
+                width:485px;
+                height:350px;
+            }
+            #sunny{
+                width:485px;
+                height:350px;
+            }
+            h1{
+                text-align:center;
+                text-decoration: underline;
+            }
+            body{
+                background-color:rgba(0, 0, 0, 0.856);
+                color:white;
+                padding:12px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 12px;
+            }
+            #text1{
+                background-color:rgba(165, 42, 42, 0.911);
+                border-radius:3px;
+                border:solid 4px rgba(216, 114, 19, 0.733);
+                padding:15px;
+            }
+            #text2{
+                background-color:rgba(165, 42, 42, 0.911);
+                border-radius:3px;
+                border:solid 4px rgba(255, 166, 0, 0.733);
+                padding:15px;
+            }
+            #list1{
+                background-color:rgba(165, 42, 42, 0.911);
+                border-radius:3px;
+                border:solid 4px rgba(255, 166, 0, 0.733);
+                width:75px;
+                padding:15px;
+            }
+            #ships{
+                display:flex;
+                flex-direction: row;
+                margin:5px;
+            }
+            #image1{
+                padding:5px;
+            }
+            #image2{
+                padding:5px;
+            }
+            #hidden{
+                width:50px;
+                height:50px;
+                background-color:rgba(165, 42, 42, 0.911);
+                color:white;
+            }
+            #texth{
+                display:flex;
+                padding:15px;
+                background-color:rgba(165, 42, 42, 0.911);
+                border-radius:3px;
+                border:solid 4px rgba(255, 166, 0, 0.733);
+            }
+            #imageh{
+                display:flex;
+                flex-direction: row;
+                margin:5px;
+            }
+            #stuff{
+                display:none;
+            }
+        </style>
     </head>
     <body>
-        <h1>Basic Starter Page</h1>
-        <p>This is a basic paragraph, this is used to write the bulk of what is on your webpage.</p>
-        <h2>This a subheader</h2>
-        <p>Paragraphs get put on their own line, <br>just like starting a new pargraph in English</p>
+        <h1>Why One Piece is Worth Watching</h1>
+
+        <h2>The Overall Show</h2>
+        <p id="text1">One Piece is a show that constantly gets barreated online for being long and not having good animation or story. It is true that it is preatty long, but in my opinion it is worth every second especially if you skip the filler. There are over 1000 episodes of One Piece with only a little over 100 episodes of filler. even if you skip the filler you are in for a long watch, however have you ever taken the time to think about how much time you spend watching shows? Take your favorite show for example, unless if it is new, unpopular, or cancelled it probably has over 60 hours at least. I know that it is still very long but that is roughly 200 episodes of One Piece but esspecially with the remake that they are making with will only be 500 episodes. That fixes the pacing, amount of episodes, and animation all in one. This is just one of many reason why I think One Piece is worth Watching.</p>
+
+        <h2>The Story</h2>
+        <p id="text2">People try to say that the story is the same thing. The main character goes to an island where the people are oppressed, stays and gets to know them, and eventually save and free them. This is true to some extent that is where the main character saves and frees the people. The difference comes with the fact that since they never watched the show they see the very end of an arc and go oh he freed the people again. However if you where to actually watch the show and know what liberation means you would know that there is a large list of places luffy helps but the people where never oppressed. People also think that there is no character dev again this is wrong. At the start of the show Luffy is strong and kind of aragent, but he quickly learns especially after Aces' death that he can't do anything and everything leading to him develpoing becoming a lot more serious when people he cares about can get hurt. This is just another of my reasons why I think One Piece is worth watching</p>
+
+        <h2>The Straw Hats</h2>
+        <ul id="list1">
+            <li>Luffy</li>
+            <li>Zoro</li>
+            <li>Nami</li>
+            <li>Usopp</li>
+            <li>Sanji</li>
+            <li>Chopper</li>
+            <li>Robin</li>
+            <li>Franky</li>
+            <li>Brook</li>
+            <li>Jinbei</li>
+        </ul>
+
+        <h2>Ships</h2>
+        <div id="ships">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzEMmagphA-sjsx9wA4SX8wSPFq6HNbehN9i55YbJYYw&s=10" alt="Going Merry" id="merry">
+            <p id="image1">The Going Merry 
+                Image from <a href="https://commons.wikimedia.org/wiki/File:%22Going_Merry%22_in_Tokyo_Bay;_July_2004.jpg" target="_blank">Wikimedia Commons</a></p>
+        </div>
+        <div id="ships">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkivVhFPFRCQyrHpgLGI1bcpjb-h-YNhjXGRBE4Zpnw&s=10" alt="The Sunny" id="sunny">
+                <p id="image2">The Sunny
+                    Image from <a href="https://www.flickr.com/photos/granun/15704018266" target="_blank">flickr</a> </p>
+        </div>
+        <p>For more information about one piece like how, when, and other interesting facts please vist the <a href="https://en.wikipedia.org/wiki/One_Piece_(1999_TV_series)" target="_blank">Wikipedia</a> of One Piece</p>
+        </div>
+        <script>
+            function show(){
+                let element = document.getElementById("stuff")
+                if (element.style.display == "flex"){
+                    element.style.display = "none"
+                    document.getElementById("hidden").innerHTML = "Show More"
+                }else{
+                    element.style.display = "flex"
+                    document.getElementById("hidden").interHTML = "Show Less"
+                }
+            }
+            let images= ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh6PtNZWa4HYyxHsRhafkzC0sF3mruv-htZybXBF5eg&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzXKZnwi38uNOYAQe6IPTjMIhE2fNpbWjg6x45Yg6OAw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRMbuuY8L6UJXgceqqBud-RnYb-Eln78PJUb_eFsm9Q&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzNZZ9GyW_s_d6tVnbiTBvdg0YYSXq074girOWCNwzNw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhhVJ0-8vLfujPfi-lBRkYjXsMj6ojLlb6mscRlf2chA&s=10"]
+            let current = 0
+            function changeImage(){
+                current+= 1
+                if (current > 4){
+                    current = 0
+                }
+                document.getElementById("imageh").src = images[current]
+            }
+        </script>
+        <button id="hidden" onclick="show()">Show More</button>
+        <div id="stuff">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOh6PtNZWa4HYyxHsRhafkzC0sF3mruv-htZybXBF5eg&s=10" alt="swords" id="imageh" onmouseout="changeImage()">
+                    <p id="texth">Zorros swords are very unique all being very stong. Howev er he didn't always have these. He starts off with 3 sword but with only one good one, The Wado Ichimonji where his others where basic ordinary ones. The way he gets Wado Ichimonji is by inheriting it from a friend that passed. After his two others swords break he gets the Sandai Kietsu and Yubashiri. The Yobashiri later gets turned to dust due to a devel fruit turning it rusty and making it unusable. In which he seeks out a new sword being the Shusui which is 1 of only 2 black blades in the series we know of. He gets this after defeating a brought back to life Ryuma and usues it for most of the story. When he gets to Wano they know the blade since it was stolen from there and should be returned. Which he does do but only since he gets a good replacment called Enma. This sword is by far my favorite sword he has mainly due to its color scheme. Enma is known for being a blade that sucks the users life force and usually kills them which is hwy nobody uses it. Zoro however due to having conqueror's haki is able to use it and not die. These are ll of zoros swords up entill this point so far.</p>
     </body>
 </html>
