@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html> <!-- This is a comment-->
+    <head>
+        <title>Snowbird</title>
+        <meta charset="UTF-8">
+        <style>
+            #snowbird{
+                width:485px;
+                height:350px;
+            }
+            #sunny{
+                width:485px;
+                height:350px;
+            }
+            h1{
+                text-align:center;
+                text-decoration: underline;
+            }
+            body{
+                background-color:white;
+                color:black;
+                padding:12px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 13px;
+            }
+            #text1{
+                background-color:rgb(18, 146, 197, 0.836);
+                border-radius:3px;
+                padding:15px;
+            }
+            #text2{
+                background-color:rgb(18, 146, 197, 0.836);
+                border-radius:3px;
+                padding:15px;
+            }
+            #list1{
+                background-color:rgba(18, 146, 197, 0.836);
+                border-radius:3px;
+                width:75px;
+                padding:15px;
+            }
+            #building{
+                display:flex;
+                flex-direction: row;
+                margin:5px;
+            }
+            #skiing{
+                display:flex;
+                flex-direction: row;
+                margin:5px;
+            }
+            #snowbird{
+                border:solid 4px rgb(18, 146, 197);
+                border-radius: 15px;
+                width:450px;
+                height:325px;
+            }
+            #image1{
+                padding:5px;
+            }
+            #image2{
+                padding:5px;
+            }
+            #hidden{
+                width:50px;
+                height:50px;
+                background-color:rgb(18, 146, 197, 0.836);
+                color:white;
+            }
+            #texth{
+                display:flex;
+                padding:15px;
+                background-color:rgb(18, 146, 197, 0.836);
+                border-radius:3px;
+            }
+            #imageh{
+                display:flex;
+                flex-direction: row;
+                margin:5px;
+                border:solid 4px rgb(18, 146, 197);
+                border-radius: 15px;
+            }
+            #stuff{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Snowbird</h1>
+
+        <h2>Winter</h2>
+        <p id="text1"> During the winter snowbird is a very nice place. They have snowcapped mountains and a lot of snow. Sometimes on your balcony you can walk out and see icicles above you. It has a very nice and fresh smell. They offer skiing since they are mainly a ski resort, a shopping mall like place where you can buy clothes, ski's, food, and everyday needs. They also hae resturants that you can try when you are out there.</p>
+
+        <h2>Summer</h2>
+        <p id="text2"></p>
+
+        <h2>Resons why to come</h2>
+        <ul id="list1">
+            <li>It a lot of places to relaxe</li>
+            <li>Offers a place to ski</li>
+            <li>Offers a swimming pool and hot tub</li>
+            <li>They have a summer faire</li>
+        </ul>
+
+        <h2>Ships</h2>
+        <div id="building">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmXnPrWN9WIqrYCqBrcdF2Oze4rCQMCuGt4CPTfTw5dg&s=10" alt="snowbird" id="snowbird">
+            <p id="image1">Snowbirds main building 
+                Image from <a href="https://www.tripadvisor.com/Attraction_Review-g57128-d126905-Reviews-Snowbird-Snowbird_Utah.html" target="_blank">Tripadvisor</a></p>
+        </div>
+        <div id="skiing">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgOR6jr25UIrikrxhFQP_9RGVKwuL4ql87xmw9_--lg&s=10" alt="skiing" id="snowbird">
+                <p id="image2"> Skiing at snowbird <a href="https://www.flickr.com/photos/granun/15704018266" target="_blank">visitutah</a></p>
+        </div>
+        <p>For more information <a href="https://en.wikipedia.org/wiki/Snowbird,_Utah" target="_blank">Wikipedia</a> on snowbird</p>
+        </div>
+        <button id="hidden" onclick="show()">Show More</button>
+        <div id="stuff">
+                    <img src="" alt="" id="imageh" onmouseout="changeImage()">
+                    <p id="texth"></p>
+        </div>
+        <script>
+            function show(){
+                let element = document.getElementById("stuff")
+                if (element.style.display == "flex"){
+                    element.style.display = "none"
+                    document.getElementById("hidden").innerHTML = "Show More"
+                }else{
+                    element.style.display = "flex"
+                    document.getElementById("hidden").innerHTML = "Show Less"
+                }
+            }
+            let images= ["", "", "", "", ""]
+            let current = 0
+            function changeImage(){
+                current+= 1
+                if (current > 4){
+                    current = 0
+                }
+                document.getElementById("imageh").src = images[current]
+
+            
+            }
+        </script>
+    </body>
+</html>
