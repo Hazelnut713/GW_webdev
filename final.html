@@ -15,6 +15,8 @@
             h1{
                 text-align:center;
                 text-decoration: underline;
+                color: rgb(18, 146, 197, 0.836);
+                
             }
             body{
                 background-color:white;
@@ -36,7 +38,7 @@
             #list1{
                 background-color:rgba(18, 146, 197, 0.836);
                 border-radius:3px;
-                width:75px;
+                width: 275px;
                 padding:15px;
             }
             #building{
@@ -89,10 +91,10 @@
         <h1>Snowbird</h1>
 
         <h2>Winter</h2>
-        <p id="text1"> During the winter snowbird is a very nice place. They have snowcapped mountains and a lot of snow. Sometimes on your balcony you can walk out and see icicles above you. It has a very nice and fresh smell. They offer skiing since they are mainly a ski resort, a shopping mall like place where you can buy clothes, ski's, food, and everyday needs. They also hae resturants that you can try when you are out there.</p>
+        <p id="text1"> During the winter snowbird is a very nice place. They have snowcapped mountains and a lot of snow. Sometimes on your balcony you can walk out and see icicles above you. It has a very nice and fresh smell. They offer skiing since they are mainly a ski resort, a shopping mall like place where you can buy clothes, ski's, food, and everyday needs. They also hae resturants that you can try when you are out there. You don't even have to go far if you wan't you can go and play in the snow.</p>
 
         <h2>Summer</h2>
-        <p id="text2"></p>
+        <p id="text2">The winter is the only time fun things happen. Snowbird is known as a ski resort especially in the winter since that is what thehy mainly offer. However that doesn't mean that the summer dosen't have something to offer. Over the summer one of the main places you go to get to the ski lifts you actually pass a summer faire like thing. They have a bunch of rides, a place where you can pan for gold and other gems, they have a trampoline area, and so much more. There is a lot that you can do depending on what you like to do.</p>
 
         <h2>Resons why to come</h2>
         <ul id="list1">
@@ -116,8 +118,8 @@
         </div>
         <button id="hidden" onclick="show()">Show More</button>
         <div id="stuff">
-                    <img src="" alt="" id="imageh" onmouseout="changeImage()">
-                    <p id="texth"></p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQyPnO2mG1QRanGD0xjE2gMxGgPLLIljxyTte_imdEA&s=10" alt="" id="imageh" onmouseover="changeImage()">
+                    <p id="texth">You also aren't limited to the resort. You can go hiking, site seeing, and bring friends to hangout with. You aren't limited to the building. Yes the building is nice and surronded by really nice views but you can also go to the top of the mountain to see it. There is even a park that you can play at if its not covered by snow in the winter. Overall this place is one of my favorite spots to visit which is why I think you should come and stay at snowbird once.</p>
         </div>
         <script>
             function show(){
@@ -130,7 +132,7 @@
                     document.getElementById("hidden").innerHTML = "Show Less"
                 }
             }
-            let images= ["", "", "", "", ""]
+            let images= ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBhZTMtqxX2QM0uKm-1N8bMyiw64ksl9HqbXsabHVUw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrOAr2-S-_isYID1FvvAxxdr477tVgYAJ6fqJiCoB1dQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYVBJ6OVKHpdnMesVZiD6_VmNRnoOkdLJAq2HJRRb1XA&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRziwO0dMjKcKW5LlRyVF6_p5cNnrDosbTRiIqct0pGlA&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQyPnO2mG1QRanGD0xjE2gMxGgPLLIljxyTte_imdEA&s=10"]
             let current = 0
             function changeImage(){
                 current+= 1
